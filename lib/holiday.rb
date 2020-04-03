@@ -1,7 +1,7 @@
 require 'pry'
 
-def second_supply_for_fourth_of_july(holiday_hash)
-  holiday_hash[:summer][:fourth_of_july][1]
+def second_supply_for_fourth_of_july(holiday_supplies)
+  holiday_supplies[:summer][:fourth_of_july][1]
   # given that holiday_hash looks like this:
   # {
   #   :winter => {
@@ -21,8 +21,8 @@ def second_supply_for_fourth_of_july(holiday_hash)
   # return the second element in the 4th of July array
 end
 
-def add_supply_to_winter_holidays(holiday_hash, supply)
-  holiday_hash.each do |season, holiday_names_hash|
+def add_supply_to_winter_holidays(holiday_supplies, supply)
+  holiday_supplies.each do |season, holiday_names_hash|
     if season == :winter
       holiday_names_hash.each do |holiday_name, supplies|
         supplies << supply
